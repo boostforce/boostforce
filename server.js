@@ -17,6 +17,7 @@ app.use(cookieParser());
 connectDB()
 
 
+app.use('/', (req, res) => { res.status(200).json('Connected to server successfully')});
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter)
 app.use('/api/admin', adminRouter)
